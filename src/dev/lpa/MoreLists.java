@@ -2,6 +2,7 @@ package dev.lpa;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class MoreLists {
@@ -57,6 +58,15 @@ public class MoreLists {
         groceries.addAll(List.of("apples","milk","cheese","mustard"));
         groceries.addAll(Arrays.asList("eggs","pickles","mustard","ham"));
         System.out.println(groceries);
+
+        groceries.sort(Comparator.naturalOrder());
+        System.out.println(groceries);
+
+        groceries.sort(Comparator.reverseOrder());
+        System.out.println(groceries);
+
+        var groceryArray = groceries.toArray(new String[groceries.size()]);
+        System.out.println(Arrays.toString(groceryArray));
 
     }
 }
